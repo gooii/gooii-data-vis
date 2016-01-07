@@ -1,13 +1,15 @@
 'use strict';
 
+angular.module('d3', []);
+
 angular.module('d3')
   .config( ['$provide', function ($provide) {
 
-    var d3WorldCloudDecorator = function($delegate){
+    var d3WorldCloudDecorator = function(){
 
       // Word cloud layout by Jason Davies, http://www.jasondavies.com/word-cloud/
       // Algorithm due to Jonathan Feinberg, http://static.mrfeinberg.com/bv_ch03.pdf
-      var d3 = $delegate;
+      //var d3 = $delegate;
       (function (exports) {
         function cloud() {
           var size = [256, 256],
@@ -430,5 +432,5 @@ angular.module('d3')
       return d3;
     };
 
-    $provide.decorator('d3', d3WorldCloudDecorator);
+    d3WorldCloudDecorator();
   }]);
