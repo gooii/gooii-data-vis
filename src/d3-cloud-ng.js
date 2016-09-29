@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('d3.cloud');
+  angular.module('d3.cloud', []);
 }());
 
 (function() {
