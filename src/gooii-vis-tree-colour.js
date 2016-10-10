@@ -21,11 +21,16 @@
       else {
         var color = colorFn(node.parent.data.id);
         var d3col = d3.color(color);
-        var c = (node.x0 - node.parent.x0) / (node.parent.x1 - node.parent.x0);
-        // console.log('Tree Colour for leaf',node, color, d3col, c);
-        return d3col.darker(c);
+        if (node.x0) {
+          var c = (node.x0 - node.parent.x0) / (node.parent.x1 - node.parent.x0);
+          // console.log('Tree Colour for leaf',node, color, d3col, c);
+          return d3col.darker(c);
+        } else {
+          // console.log('Tree Colour for leaf',node, color, d3col, c);
+          return d3col.darker(0.5);
+        }
       }
-    }
+    };
 
     return factory;
   }

@@ -1,6 +1,6 @@
 {
   "name": "gooii-data-vis",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "src/gooii-vis-tree-colour.js",
   "ignore": [
     ".tmp",
